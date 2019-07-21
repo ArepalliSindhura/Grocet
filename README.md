@@ -1,2 +1,2 @@
 # Grocet
-Grocery delivery application using anular
+Grocery delivery application using angular.
