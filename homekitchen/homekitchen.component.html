@@ -1,0 +1,163 @@
+<!--One of the products display component-->
+
+<div class="breadCrumbs">
+
+        </div>
+        <!--Filter Menu-->
+        <div class="filterMenu">
+            <div class="categories">
+                <h4 style="color:#222">Categories</h4>
+                <hr style="margin-top: -11px;">
+                <a href="">Fruits and Vegetables</a>
+                <a href=""><li>Exotic Fruits & Veggies </li></a>
+                <a href=""><li>Fresh Vegetables </li></a>
+                <a href=""><li>Herbs & Seasonings</li></a>
+            </div>
+            <div class="brand">
+                <h4 style="color:#222">Brand</h4>
+                <hr style="margin-top: -11px;">
+                <input type="text" placeholder="Search by Brand"><i class="fas fa-search"></i>
+                <a href=""><label class="container">Fresho
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                </label></a>
+            </div>
+            <div class="brand">
+                <h4 style="color:#222">Price</h4>
+                <hr style="margin-top: -11px;">
+                <a href=""><label class="container">Less than Rs 20
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                </label></a>
+                <a href=""><label class="container">Rs 21 to Rs 50
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                </label></a>
+                <a href=""><label class="container">Rs 51 to Rs 100
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                </label></a>
+            </div>
+            <div class="brand">
+                    <h4 style="color:#222">Discount</h4>
+                    <hr style="margin-top: -11px;">
+                    <a href=""><label class="container">15% - 25%
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                    </label></a>
+            </div>
+            <div class="brand">
+                    <h4 style="color:#222">Pack Size</h4>
+                    <hr style="margin-top: -11px;">
+                    <input type="text" placeholder="Search by Brand"><i class="fas fa-search"></i>
+                    <div class="scrolling brand">
+                            <a href=""><label class="container">1 pc
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                            </label></a>
+                            <a href=""><label class="container">1 pc approx. 400 to 600 gm
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                            </label></a>
+                            <a href=""><label class="container">1 pc approx. 500 to 800 gm
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                            </label></a>
+                            <a href=""><label class="container">2 pcs
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                            </label></a>
+                            <a href=""><label class="container">100 gm
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                            </label></a>
+                            <a href=""><label class="container">200 gm
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                            </label></a>
+                            <a href=""><label class="container">250 gm
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                            </label></a>
+                            <a href=""><label class="container">500 gm
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                            </label></a>
+                            <a href=""><label class="container">1 kg
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                            </label></a>
+                    </div>
+        
+            </div>
+            <div class="brand">
+                    <h4 style="color:#222">Food Preference</h4>
+                    <hr style="margin-top: -11px;">
+                    <a href=""><label class="container">Vegetarian
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                    </label></a>
+            </div>
+        </div>
+        <!--Main Body with grids and all-->
+        <div class="mainContainer">
+            <div class="mainConatiner_title">
+                <h2>Fresh Vegetables</h2>
+                <div class="popularity">
+                        <input list="month" name="month" placeholder="Popularity" class="month_selector">
+                        <datalist id="month">
+                             <option value="Popularity">
+                             <option value="Price-Low to High">
+                             <option value="Price-High to Low">
+                             <option value="Alphabetical">
+                             <option value="Rupee Saving-Low to High">
+                             <option value="Rupee Saving-High to Low">
+                             <option value="%Off-High to Low"> 
+                                      
+                        </datalist>
+                </div>
+            </div>    
+            <!--Products display-->
+            <div class="grid_items">
+            <div *ngFor="let product of products">
+                    <div class="grid_row" >
+                            <div class="grid_item">
+                                <figure class="gridItem">
+                                        <a href=""><li><img [src]="product.imagePath"></li></a>
+                                        <figcaption class="grid_link">
+                                        <img src="assets/Images/vegSymbol.png" style="height: 20px;"><br/>
+                                        <p style="font-size: 10px;color: #ccc;margin-left: 51px;">{{product.category}}</p>
+                                        <a href="" style="margin-left: 39px;">{{product.name}}</a></figcaption>
+                                </figure>
+                                <div class="item_options">
+                                        <input list="quantity" name="quantity" placeholder="1kg - Rs42" class="quantity_selector">
+                                        <datalist id="quantity">
+                                                <option value="1kg - Rs42">
+                                                <option value="500gm - Rs21">
+                                        </datalist>
+                                        <div class="item_options2">
+                                            <div class="item_price">
+                                                    MRP :<del>{{product.OriginalPrice}}</del><h5>Rs {{product.FinalPrice}}</h5>
+                                            </div>
+                                            <a href=""><i class="fas fa-truck-moving" style="margin-top: 27px;margin-left: 4px;"></i></a>
+                                            <div class="delivery_option1">Standard Delivery: Tomorrow Morning</div>
+                                            <a href=""><i class="fas fa-motorcycle" style="margin-top:6px;margin-left: 4px;"></i></a>
+                                            <div class="delivery_option1">Express Delivery: Out of Stock</div>
+                                            <div class="quantity_decider">
+                                                <!--<button>Qty</button>
+                                                <span><input type="text" placeholder="1"></span>-->
+                                            </div>
+                                            <span class="add_button">
+                                                    <button type="submit" (click)="addToCart(product)">ADD<i class="fas fa-shopping-basket"></i></button>
+                                            </span>
+                                        </div>
+                                        <br>
+                
+                                </div>
+        </div>
+                            </div>
+                            
+                        </div>
+
+                </div>
+                </div>

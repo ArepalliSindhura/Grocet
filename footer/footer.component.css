@@ -1,0 +1,211 @@
+footer {
+    position: absolute;
+    
+    height:511.2px;
+
+    margin-top: 40px;
+
+margin-left: 11px;
+
+}
+
+.fluidtext{
+    margin-left: 386px;
+}
+
+.part1 {
+
+    height:255px;
+    margin-left: -61px;
+
+}
+
+.part1 li{
+
+    list-style:none;
+
+    display:inline-block;
+
+    float:left;
+
+}
+
+.bigbasket {
+
+width: 160px;
+
+margin-left: 196px;
+
+    display:inline-block;
+
+    float:left;
+   
+
+}
+.bigbasket a:hover{
+    color:#6cd138; 
+}
+
+.help {
+
+    display:inline-block;
+
+    float:left;
+
+    width: 160px;
+
+margin-left: 136px
+
+}
+
+.downloadApp {
+
+    position:absolute;
+
+    margin-left: 800px;
+
+}
+.downloadApp img{
+    margin-top: 17px;
+}
+
+.getSocial {
+
+    position:absolute;
+
+    margin-left: 1120px;
+
+    width: 186px;
+    height: 201px;
+
+}
+
+.part1 h2{
+
+    color: #6cd138;
+
+font-size: 16px;
+
+font-family: ProximaNovaA-Semibold;
+
+}
+
+.part1 a{
+
+    -webkit-transition-duration: 0.45;
+
+transition-duration: 0.2s;
+
+    color: black;
+
+}
+
+
+
+.part1 a:hover {
+
+color:#6cd138;           
+
+}
+
+.sideHeading h2{
+
+    color: #6cd138;
+
+font-size: 16px;
+
+font-family: ProximaNovaA-Semibold;
+
+   
+
+    position:absolute;
+
+    margin-left: 200px;
+
+}
+
+.fluidText {
+
+    position:absolute;
+
+    width: 900px;
+
+margin-left: 448px;
+
+margin-top: -2px;
+
+}
+
+
+
+.fluidtext a{
+
+    display:inline-block;
+
+    float:left;
+
+    text-decoration:none;
+
+    color:black;
+    -webkit-transition-duration: 0.45;
+
+    transition-duration: 0.2s;
+
+   
+
+}
+
+.fluidtext a:hover{
+
+    color:#6cd138;
+
+}
+
+.fluidText2 {
+
+    position:absolute;
+
+    width: 900px;
+
+    margin-left: 388px;
+
+margin-top: -2px;
+
+}
+
+
+
+.fluidText2 li{
+
+    display:inline-block;
+
+    float:left;
+
+    list-style:none;
+
+    color:black;
+
+   
+
+}
+.container1{
+    margin-top: 10px;
+}
+.container2{
+    margin-top: 55px;
+    position:absolute;
+    width: 1417px;
+}
+.container3{
+    margin-top: 112px;
+    position:absolute;
+}
+.container4{
+    margin-top: 101px;
+    position:absolute;
+}
+
+.part2{
+    margin-left: -112px;
+    margin-top: 34px;
+}

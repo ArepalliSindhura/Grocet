@@ -1,0 +1,52 @@
+<!--Login component-->
+
+<br>
+<br>
+<br>
+<br>
+<div class="login_popup">
+        <div class="login_box">
+<div class ="login_title">
+<h2  style="text-align: center;">Login</h2>
+<hr>
+</div>
+<form #loginForm="ngForm" (ngSubmit)="validateUser(loginForm.value)" novalidate>
+        <div class="email_box">
+<input type="text" name="c_email" placeholder="Enter email" ngModel #c_email="ngModel" required ><br/>
+<input type="password" name="password" placeholder="Enter Password" ngModel #password="ngModel" 
+required minlength="2" maxlength="10"><br/></div>
+<div class="otp_login">
+<button [disabled]="!loginForm.valid"  style="text-align: center;">Login</button></div>
+</form>
+<div *ngIf="loginForm.invalid && (loginForm.dirty || loginForm.touhed)">invalid error occurred</div>
+<div class="text-danger">
+    <div class = "constraints">
+<div *ngIf="c_email.errors?.required">Please enter email..</div>
+<div *ngIf="password.errors?.minlength">Please enter 4 characters..</div>
+<div *ngIf="password.errors?.required">Please enter password..</div> 
+</div>
+</div>
+</div>
+<div class="side_advt">
+        <div class="advt_links">
+            <li><div class="advt_link1">
+                    <h6>Quality</h6>
+                    <p>You Can Trust</p>
+                </div></li>
+            <li><div class="advt_link1">
+                    <h6>Return Policy</h6>
+                    <p>No Questions Asked</p>
+                </div></li>
+            <li><div class="advt_link1">
+                    <h6>Ontime Guarantee</h6>
+                    <p>Or 10% value back</p>
+                </div></li>
+        </div>
+        <div class="promo_image">
+            <img src="https://www.bigbasket.com/media/uploads/banner_images/login_banner.png">
+        </div>
+        <div class="closeButton">
+                <i class="fas fa-times-circle"></i>
+        </div>
+    </div>
+</div>

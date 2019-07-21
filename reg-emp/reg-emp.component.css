@@ -1,0 +1,153 @@
+.login_popup{
+    height: 470px;
+    width: 722px;
+    margin-left: 412px;
+}
+.login_box{
+    width: 393px;
+    height: 470px;
+    display: inline-block;
+    float: left;
+    margin-left: -99px;
+}
+.login_title button{
+    margin-left: 125px;
+    margin-top: 26px;
+    background-color: white;
+    color: #84c225;
+    border: none;
+    border-bottom-color: #84c225;
+}
+.login_title{
+    font-size: 17px;
+}
+.login_title hr{
+    margin-top: 7px;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #84c225;
+    width: 139px;
+    margin-left: 123px;
+}
+.login_title button:focus{
+    outline:none;
+    border-bottom-color:#84c225;
+}
+.login_options{
+    margin-left: 85px;
+    font-size: 32px;
+}
+.login_options a{
+    margin-left: 48px;
+    color: #84c225;
+}
+.login_options a:hover{
+    color:#6cd138;
+}
+.login_box h5{
+    font-size: 14px;
+    color: #aeaeae;
+}
+.email_box input{
+    width: 350px;
+    margin-left: 20px;
+    margin-top: 38px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 5px;
+    font-size: 14px;
+}
+.email_box input:focus{
+    outline:none;
+    border-bottom-color:#84c225;
+}
+.otp_login button{
+    margin-left: 21px;
+    width: 348px;
+    height: 54px;
+    margin-top: 24px;
+    border-radius: 6px;
+    border: none;
+    background-color: #84c225;
+    color: #f3f3f3;
+    font-size: 19px;
+}
+.otp_login button:hover{
+    cursor:pointer;
+}
+.otp_login button:focus{
+    outline:none;
+}
+.business_user{
+    margin-top: 118px;
+    font-size: 17px;
+    margin-left: 138px;
+}
+.business_user a:hover{
+    color: #007bff;
+    text-decoration:none;
+}
+.side_advt{
+    display:inline-block;
+    float: left;
+    height: 400px;
+    width: 320px;
+    margin-top: 34px;
+    background-image: linear-gradient(to right,#e5e4e4,white 9%);
+}
+.advt_links{
+    list-style:none;
+    margin-left:111px;
+}
+.advt_link1 h6{
+    font-size:13px;
+}
+.advt_link1 p{
+    font-size:12px;
+}
+.advt_link1{
+    border-bottom: 1px dashed #b6b3b3;
+    margin-top: 10px;
+    width: 140px;
+}
+.promo_image img{
+    margin-top: 10px;
+    height: 109px;
+    margin-left: 77px;
+}
+.closeButton i{
+    position:absolute;
+    margin-top: -331px;
+    margin-left: 310px;
+    font-size: 20px;
+}
+#signup_body{
+    margin-left: 60px;
+}
+#signup_body input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 5px;
+    font-size: 14px;
+    width: 138px;
+    margin-top: 21px;
+}
+#signup_body input:focus{
+    outline:none;
+    border-bottom-color:#84c225;
+}
+#signup_body button{
+    margin-top: 40px;
+    width: 298px;
+    height: 52px;
+    border-radius: 6px;
+    border: none;
+    background-color: #84c225;
+    color: #f3f3f3;
+    font-size: 19px;
+}
+#signup_body button:focus{
+    outline:none;
+}

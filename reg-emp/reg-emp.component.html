@@ -1,0 +1,57 @@
+<!--register component-->
+
+<div class="login_popup">
+  <div class="login_box">
+        <div class="login_title">
+          <button type="submit" onclick="SwapDivsWithClick('signup_body','login_body')">Signup</button>
+          <button type="submit" style="margin-left: 12px;" onclick="SwapDivsWithClick('signup_body','login_body')">Login</button>
+          <hr>
+      </div>
+      <div class="login_options">
+          <a href="https://www.facebook.com/"><span class="fa fa-facebook"></span></a>
+          <a href="https://www.google.com/"><span class="fa fa-google"></span></a>
+      </div>
+      <h5 style="text-align: center;">OR</h5>
+      <div id="login_body" style="display:none;">
+      <div class="email_box">
+          <input type="text" placeholder="Email">
+      </div>
+      <div class="otp_login">
+          <button type="">Login using OTP</button>
+      </div>
+      <div class="business_user">
+          <a href="">Business User<i class="fas fa-angle-right" style="margin-left: 6px;"></i></a>
+      </div></div>
+      <div id="signup_body" style="display:block;">
+          <input type="text" placeholder="First Name" [(ngModel)] = "customer.c_Fname">
+          <input type="text" placeholder="Last Name" [(ngModel)] ="customer.c_Lname" style="margin-left: 18px;">
+          <input type="text" placeholder="Email" [(ngModel)]="customer.c_email" style="width: 300px;">
+          <input type="password" placeholder="Password" [(ngModel)]="customer.password">
+          <input type="text" placeholder="Referal Code" style="margin-left: 18px;">
+          <!----button type="submit">Sign Up</button-->
+          <button type="submit" (click)="registerEmp()"> Sign Up</button>
+      </div>
+  </div>
+  <div class="side_advt">
+      <div class="advt_links">
+          <li><div class="advt_link1">
+                  <h6>Quality</h6>
+                  <p>You Can Trust</p>
+              </div></li>
+          <li><div class="advt_link1">
+                  <h6>Return Policy</h6>
+                  <p>No Questions Asked</p>
+              </div></li>
+          <li><div class="advt_link1">
+                  <h6>Ontime Guarantee</h6>
+                  <p>Or 10% value back</p>
+              </div></li>
+      </div>
+      <div class="promo_image">
+          <img src="https://www.bigbasket.com/media/uploads/banner_images/login_banner.png">
+      </div>
+      <div class="closeButton">
+              <i class="fas fa-times-circle"></i>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,601 @@
+<!--Home page component-->
+
+<div class="autoScroll">
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+  <ol class="carousel-indicators">
+
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+
+              <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+
+              <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+
+              <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+
+  </ol>
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+
+      <a class="nav-link" routerLink="homekitchen"><img src="https://www.bigbasket.com/media/uploads/banner_images/T1_All_Mango_DT_2_1600x460_25thMay.jpg" class="d-block w-100" alt="..."></a>
+
+    </div>
+
+    <div class="carousel-item">
+
+      <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/T1_Hyderabad_Steels_Cookware_DT_3_1600x460_15thJun.jpg" class="d-block w-100" alt="..."></a>
+
+    </div>
+
+    <div class="carousel-item">
+
+      <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/All_bbstar_SignUp3_DT_3_1600x460_28thMay.jpg" class="d-block w-100" alt="..."></a>
+
+    </div>
+
+              <div class="carousel-item">
+
+      <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/HP-2794-1600x460-15thJun19.jpg" class="d-block w-100" alt="..."></a>
+
+    </div>
+
+              <div class="carousel-item">
+
+      <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/All_Fish_Egg_Meat_DT_10_1600X460_25thMay.jpg" class="d-block w-100" alt="..."></a>
+
+    </div>
+
+              <div class="carousel-item">
+
+      <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/1906098_crockery-glassware_460.jpg" class="d-block w-100" alt="..."></a>
+
+    </div>
+
+              <div class="carousel-item">
+
+      <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/1906089_happy-chef_460.jpg" class="d-block w-100" alt="..."></a>
+
+    </div>
+
+  </div>
+
+ 
+
+    </div>
+
+</div>
+
+ 
+
+<!-- *********Assurance Baanner*********-->
+
+<div class="ABanner">
+
+    <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/guarantee-sec2-22-2-17-1000-New-22f.jpg"></a>
+
+</div>
+
+ 
+
+<!-- *********Icons In Between**********--->
+
+<div class="imageIcons">
+
+    <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/T1_All_Home_Kitchen_DT_2_190X60_25thMay.jpg"></a>
+
+              <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/T1_All_Mango_DT_3_190X60_25thMay.jpg"></a>
+
+              <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/All_Buttons_bbstar_190X60_30thMay.jpg"></a>
+
+              <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/T1_All_exotic_DT_4_190X60_25thMay.jpg"></a>
+
+              <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/T1_All_organic-store_DT_5_190X60_25thMay.jpg"></a>
+
+              <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/T1_All_Deals-of-the-week_DT_6_190X60_25thMay.jpg"></a>
+
+</div>
+
+ 
+
+<!-- *********My Smart Basket*********-->
+
+<div class="smartBasket">
+
+    <div class="smartBasketTitle">
+
+                  <h2 style="font-size:24px">My Smart Basket</h2>
+
+                           <div class="viewAll">
+
+                               <button type="submit"> <a class="nav-link" routerLink="view">View All </a></button>
+
+                           </div>
+
+              </div>
+
+              <hr id="line">
+                     <!--Products display-->
+            <div class="grid_items">
+                <div *ngFor="let product of products">
+                        <div class="grid_row" >
+                                <div class="grid_item">
+                                    <figure class="gridItem">
+                                            <a href=""><li><img [src]="product.imagePath"></li></a>
+                                            <figcaption class="grid_link">
+                                            <img src="assets/Images/vegSymbol.png" style="height: 20px;"><br/>
+                                            <p style="font-size: 10px;color: #ccc;margin-left: 40px;">{{product.category}}</p>
+                                            <a href="" style="    margin-left: 40px;">{{product.name}}</a></figcaption>
+                                    </figure>
+                                    <div class="item_options">
+                                            <input list="quantity" name="quantity" placeholder="1kg - Rs42" class="quantity_selector">
+                                            <datalist id="quantity">
+                                                    <option value="1kg - Rs42">
+                                                    <option value="500gm - Rs21">
+                                            </datalist>
+                                            <div class="item_options2">
+                                                <div class="item_price">
+                                                        MRP :<del>{{product.OriginalPrice}}</del><h5>Rs {{product.FinalPrice}}</h5>
+                                                </div>
+                                                <a href=""><i class="fas fa-truck-moving" style="margin-top: 27px;margin-left: 4px;"></i></a>
+                                                <div class="delivery_option1">Standard Delivery: Tomorrow Morning</div>
+                                                <a href=""><i class="fas fa-motorcycle" style="margin-top:6px;margin-left: 4px;"></i></a>
+                                                <div class="delivery_option1">Express Delivery: Out of Stock</div>
+                                                <div class="quantity_decider">
+                                                    <!--<button>Qty</button>
+                                                    <span><input type="text" placeholder="1"></span>-->
+                                                </div>
+                                                <span class="add_button">
+                                                        <button type="submit" (click)="addToCart(product)">ADD<i class="fas fa-shopping-basket"></i></button>
+                                                </span>
+                                            </div>
+                                            <br>
+                    
+                                    </div>
+            </div>
+                                </div>
+                                
+                            </div>
+    
+                    </div>
+              <div class="smartBasketItems">
+
+              </div>
+
+</div>
+
+ 
+
+<!-- *********Another Sliding*********-->
+
+<div class="anotherSlider">
+
+     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+  <ol class="carousel-indicators">
+
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+
+             
+
+  </ol>
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+
+      <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/db78f483-176b-4256-8ae8-8296c7b27e84/T1_All_Mango_DT_4_1130x400_25thMay.jpg" class="d-block w-100" alt="..."></a>
+
+    </div>
+
+    <div class="carousel-item">
+
+      <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/db78f483-176b-4256-8ae8-8296c7b27e84/All_SignUp1_DT_1_1130x400_16thApr.jpg" class="d-block w-100" alt="..."></a>
+
+    </div>
+
+    <div class="carousel-item">
+
+      <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/db78f483-176b-4256-8ae8-8296c7b27e84/T1_All_BeautyStore_DT_2_1130x400_25May.jpg" class="d-block w-100" alt="..."></a>
+
+    </div>
+
+             
+
+  </div>
+
+ 
+
+    </div>
+
+</div>
+
+ 
+
+<!--*********Affiliates*********-->
+
+<div class="affiliates">
+
+    <div class="affiliatesTitle">
+
+                  <h2 style="font-size: 24px">Affiliates</h2>
+
+              </div>
+
+              <hr id="line">
+
+              <div class="affiliatesOptions">
+
+                  <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/7ef4d661-2222-42aa-bcff-fce482ca4317/All_ICICI_DT_1_480x360_16thJun.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/7ef4d661-2222-42aa-bcff-fce482ca4317/All_PayTM-Movie_DT_2_480x360_16thJun.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/7ef4d661-2222-42aa-bcff-fce482ca4317/All_HSBC_DT_3_480x360_16thJun.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/7ef4d661-2222-42aa-bcff-fce482ca4317/T1_All_View_DT_4_480x360_16thJun.jpg"></a>
+
+              </div>
+
+</div>
+
+ 
+
+<!--*********Fruits and Vegetables(same as above)*********-->
+
+<div class="affiliates">
+
+   <div class="affiliatesTitle">
+
+                  <h2 style="font-size: 24px">Fruits and Vegetables</h2>
+
+              </div>
+
+              <hr id="line">
+
+              <div class="affiliatesOptions">
+
+                  <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/f8e5e266-b052-44a0-be43-f4ef40cb8dc7/1906005_summer-specials_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/f8e5e266-b052-44a0-be43-f4ef40cb8dc7/1906006_fruit-low-price_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/f8e5e266-b052-44a0-be43-f4ef40cb8dc7/1906007_healthy-veggies_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/f8e5e266-b052-44a0-be43-f4ef40cb8dc7/1906008_summer-coolers_t1_360.jpg"></a>
+
+              </div>
+
+</div>
+
+ 
+
+<!--*********Staples*********-->
+
+<div class="affiliates">
+
+    <div class="affiliatesTitle">
+
+                  <h2 style="font-size: 24px">Staples</h2>
+
+              </div>
+
+              <hr id="line">
+
+              <div class="staplesOptions">
+
+                  <div class="biggerOne">
+
+                      <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/72656c59-5231-4e63-b082-03a70b0b5452/T1_All_dryfruits_DT_1_560x378_25thMay.jpg"></a>
+
+                           </div>
+
+                           <div class="smallerOnes">
+
+                               <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/72656c59-5231-4e63-b082-03a70b0b5452/1906009_millet-flours_t1_184.jpg"></a>
+
+                               <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/72656c59-5231-4e63-b082-03a70b0b5452/1906010_brown-red-rice_t1_184.jpg"></a>
+
+                               <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/72656c59-5231-4e63-b082-03a70b0b5452/T1_All_oil_DT_3_275x184_25thMay.jpg"></a>
+
+                               <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/72656c59-5231-4e63-b082-03a70b0b5452/1906011_superfoods_t1_184.jpg"></a>
+
+                  </div>
+
+              </div>
+
+</div>
+
+ 
+
+<!--*********30%Off*********-->
+
+<div class="affiliates">
+
+    <div class="affiliatesTitle">
+
+                  <h2 style="font-size: 24px">Summer Coolers Up to 30% Off</h2>
+
+              </div>
+
+              <hr id="line">
+
+              <div class="offItems">
+
+                    	     <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/83fd99e8-e9ae-4625-921d-38e0d743377c/1906012_juices_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/83fd99e8-e9ae-4625-921d-38e0d743377c/1906013_soft-drinks_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/83fd99e8-e9ae-4625-921d-38e0d743377c/1906014_flavoured-milk_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/83fd99e8-e9ae-4625-921d-38e0d743377c/1906015_yoghurt-curd_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/83fd99e8-e9ae-4625-921d-38e0d743377c/1906016_buttermilk_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/83fd99e8-e9ae-4625-921d-38e0d743377c/1906017_concentrates_t1_360.jpg"></a>
+
+              </div>
+
+</div>
+
+ 
+
+ 
+
+<!--*********World Cup Store*********-->
+
+<div class="affiliates">
+
+    <div class="affiliatesTitle">
+
+                  <h2 style="font-size: 24px">World Cup Store</h2>
+
+              </div>
+
+              <hr id="line">
+
+              <div class="affiliatesOptions">
+
+                  <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/288921d3-f3df-4fe7-afeb-6b6c7daca418/1906018_snacks-namkeen_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/288921d3-f3df-4fe7-afeb-6b6c7daca418/1906019_biscuits-cookies_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/288921d3-f3df-4fe7-afeb-6b6c7daca418/1906020_chocolates-sweets_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/288921d3-f3df-4fe7-afeb-6b6c7daca418/1906021_beverages_360.jpg"></a>
+
+              </div>
+
+</div>
+
+ 
+
+<!--*********Cleaning and household*********-->
+
+<div class="affiliates">
+
+    <div class="affiliatesTitle">
+
+                  <h2 style="font-size: 24px">Cleaning and Housing</h2>
+
+              </div>
+
+              <hr id="line">
+
+              <div class="offItems">
+
+                  <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/2bdfffaf-c69e-426c-9032-7ff16020abb5/1906037_floor-toilet_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/2bdfffaf-c69e-426c-9032-7ff16020abb5/1906038_bucket-wash_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/2bdfffaf-c69e-426c-9032-7ff16020abb5/1906039_machine-wash_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/2bdfffaf-c69e-426c-9032-7ff16020abb5/1906040_kitchencleaning_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/2bdfffaf-c69e-426c-9032-7ff16020abb5/1906041_fresheners_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/2bdfffaf-c69e-426c-9032-7ff16020abb5/1906042_repellents_t1_360.jpg"></a>
+
+              </div>
+
+</div>
+
+ 
+
+<!--*********Baby Care*********-->
+
+<div class="affiliates">
+
+    <div class="affiliatesTitle">
+
+                  <h2 style="font-size: 24px">Baby Care</h2>
+
+              </div>
+
+              <hr id="line">
+
+              <div class="affiliatesOptions">
+
+                  <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/4f74695a-8a5f-4014-86a3-49a3979a54b8/1906045_food-formula_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/4f74695a-8a5f-4014-86a3-49a3979a54b8/1906044_bath-hygiene_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/4f74695a-8a5f-4014-86a3-49a3979a54b8/1906043_diapers-nappies_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/4f74695a-8a5f-4014-86a3-49a3979a54b8/1906046_feeding-accessory_360.jpg"></a>
+
+              </div>
+
+</div>
+
+ 
+
+<!--*********Home and kitchen-60%off*********-->
+
+<div class="affiliates">
+
+    <div class="affiliatesTitle">
+
+                  <h2 style="font-size: 24px">Home and Kitchen Up to 60% Off</h2>
+
+              </div>
+
+              <hr id="line">
+
+              <div class="offItems">
+
+                  <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/1f2d5c23-bada-4e08-93db-39df7c88ba8d/1906053_tawa-kadhai-pan_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/1f2d5c23-bada-4e08-93db-39df7c88ba8d/1906054_utensils-store_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/1f2d5c23-bada-4e08-93db-39df7c88ba8d/1906055_cleaning-aids_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/1f2d5c23-bada-4e08-93db-39df7c88ba8d/1906056_flask-casserole_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/1f2d5c23-bada-4e08-93db-39df7c88ba8d/1906057_bakeware_t1_360.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/1f2d5c23-bada-4e08-93db-39df7c88ba8d/1906058_dinner-sets_t1_360.jpg"></a>
+
+              </div>
+
+</div>
+
+ 
+
+<!--*********Beauty and grooming*********-->
+
+<div class="affiliates">
+
+    <div class="affiliatesTitle">
+
+                  <h2 style="font-size: 24px">Beauty and Grooming</h2>
+
+              </div>
+
+              <hr id="line">
+
+              <div class="staplesOptions">
+
+                  <div class="biggerOne">
+
+                      <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/b8859b73-0264-49b7-b615-53727933ac43/1906063_makeup_378.jpg"></a>
+
+                           </div>
+
+                           <div class="smallerOnes">
+
+                               <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/b8859b73-0264-49b7-b615-53727933ac43/1906059_bath-body_t1_184.jpg"></a>
+
+                               <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/b8859b73-0264-49b7-b615-53727933ac43/1906066_deos-fragrances_t1_184.jpg"></a>
+
+                               <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/b8859b73-0264-49b7-b615-53727933ac43/1906065_skin-care_t1_184.jpg"></a>
+
+                               <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/b8859b73-0264-49b7-b615-53727933ac43/1906064_mens-grooming_184.jpg"></a>
+
+                  </div>
+
+              </div>
+
+</div>
+
+ 
+
+<!-- *********Another Sliding*********-->
+
+<div class="anotherSlider">
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+  <ol class="carousel-indicators">
+
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+
+             
+
+  </ol>
+
+  <div class="carousel-inner">
+
+    <div class="carousel-item active">
+
+     <a href=""> <img src="https://www.bigbasket.com/media/uploads/banner_images/T1_All_HealthStore_DT_3_1130x400_25thMay.jpg" class="d-block w-100" alt="..."></a>
+
+    </div>
+
+    <div class="carousel-item">
+
+      <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/1906067_icecream-corner_t1_400.jpg" class="d-block w-100" alt="..."></a>
+
+    </div>
+
+    <div class="carousel-item">
+
+      <a href=""><img src="https://www.bigbasket.com/media/uploads/banner_images/T1_Hyderabad_Chennai_Delhi_Noida_Gurgaon_DT_bigsave_1130x400_11thJune.jpg" class="d-block w-100" alt="..."></a>
+
+    </div>
+
+             
+
+  </div>
+
+ 
+
+    </div>
+
+</div>
+
+ 
+
+<!--*********Brand Store*********-->
+
+<div class="affiliates">
+
+    <div class="affiliatesTitle">
+
+                  <h2 style="font-size: 24px">Brand Store</h2>
+
+              </div>
+
+              <hr id="line">
+
+              <div class="affiliatesOptions">
+
+                  <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/3501d988-a2aa-4d91-ae3d-e61f0ebdd205/T1_All_Patanjali_DT_1_480x360_25thMay.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/3501d988-a2aa-4d91-ae3d-e61f0ebdd205/T1_All_Whisper_DT_2_480x360_25thMay.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/3501d988-a2aa-4d91-ae3d-e61f0ebdd205/T1_All_aer_DT_3_480x360_25thMay.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/3501d988-a2aa-4d91-ae3d-e61f0ebdd205/T1_All_Durex_DT_4_480x360_25thMay.jpg"></a>
+
+              </div>
+
+              <div class="affiliatesOptions">
+
+                  <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/3501d988-a2aa-4d91-ae3d-e61f0ebdd205/T1_All_Mortein_DT_5_480x360_25thMay.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/3501d988-a2aa-4d91-ae3d-e61f0ebdd205/T1_All_Ponds_DT_6_480x360_25thMay.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/3501d988-a2aa-4d91-ae3d-e61f0ebdd205/T1_All_Dettol_DT_7_480x360_25thMay.jpg"></a>
+
+                           <a href=""><img src="https://www.bigbasket.com/media/customPage/355c27b8-a44f-4900-a390-8e82c69b8021/24afa752-98c2-40dc-9ef4-7c4f9ad5278a/3501d988-a2aa-4d91-ae3d-e61f0ebdd205/T1_All_Himalaya_DT_8_480x360_12thJun.jpg"></a>
+
+              </div>
+
+</div>
+
+ 

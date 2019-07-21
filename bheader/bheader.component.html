@@ -1,0 +1,235 @@
+<!--This component is for the header-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class = "header">
+<div class = "sticky-top">
+<div class="topBar">
+    
+  <!--Logo-->
+
+  <div class="logo">
+
+     <a href = ""><img src="assets/Images/logo.jpg" title="Grocet"></a>
+
+  </div>
+
+  <!--Details to the right-->
+
+  <div class="details">
+
+     <li style="margin-left:522px"><span class="fa fa-phone"  style="margin-right:3px"></span>1860 123 1000</li>
+
+     <a href=""><li style="margin-left:15px"><span class="fa fa-map-marker"></span>Jubilee Hills Checkpost, Hyderabad</li></a>
+
+               <a class="nav-link" routerLink="login"><li style="margin-left:15px"><span class="fa fa-user" style="margin-right:3px"></span>Login
+
+               <span style="margin:0 10px">|</span></li></a>
+
+               <a class="nav-link" routerLink="regEmp"><li style="margin-left:5px">Sign up</li></a>
+              <!-- <a class="nav-link" routerLink="homepage" (click)="logout()"><li style="margin-left:5px">|   logout</li></a>-->
+
+  </div>
+
+  <!--Search Bar-->
+
+  <div class="search">
+
+      <input type="text" placeholder="Search for Products..">
+
+                <button type="submit"><span class="fa fa-search"></span></button>
+
+  </div>
+
+  <!--New Launches icon-->
+
+  <div class="newLaunches">
+
+  <button type="submit">NEW LAUNCHES</button>
+
+  </div>
+
+  <!--My Basket-->
+
+  <div class="basket">
+
+     <div class="dropdown">
+
+        <!--<button class="nav-link" routerLink="cart">My Basket{{products.length}} class="dropbtn"<i class="fas fa-shopping-basket" style="margin-right:5px"></i></button>-->
+        <button><a class="nav-link" routerLink="cart"><span class="fa fa-shopping-basket"></span></a>My Basket {{products.length}}</button>
+
+     </div>
+
+  </div>
+  <!--Login Sign up-->
+  <div class="loginSignup">
+     <div id="login_popup">
+        
+     </div>
+     <div id="signup_popup" style="display:none;">
+
+     </div>
+  </div>
+<br>
+<br>
+<br>
+  <body>
+    <div id = "menu">
+      <ul>
+        <li style="line-height: 48px;"><a class = "active" href="#" style="line-height: 48px;">SHOP   <i class="arrow down"></i><span></span></a>
+          <ul>
+          <li><a class = "nav-link" routerLink = "homekitchen">Fruits & vegetables</a>
+          <ul>
+            <li><a href="#">Fresh vegetables</a>
+            <ul>
+              <li><a href="#">Potato,Onion & Tomato</a>
+              <ul>
+                <li><a href="#">POPULAR SEARCHES</a></li>
+                <li><a >Vegetables</a></li>
+                <li><a href="#">Tomato</a></li>
+                <li><a href="#">Onion</a></li>
+                <li><a href="#">Potato</a></li>
+                <li><a href="#">Carrot</a></li>
+                <li><a href="#">Cucumber</a></li>
+              </ul>
+              </li>              
+              <li><a href="#">Cucumber & Capsicum</a></li>
+              <li><a href="#">Cabbage & Cauliflower</a></li>
+              <li><a href="#">Root Vegetables</a></li>
+              <li><a href="#">Leafy Vegetables</a></li>
+              <li><a href="#">Beans,brinjals&okra</a></li>
+              <li><a href="#">Gourd,Pumpkin,Drumstick</a></li>
+              <li><a href="#">Speciality</a></li>
+            </ul>
+            </li>
+            <li><a href="#">Herbs & Seasonings</a>
+            <ul>
+              <li><a href="#">Lemon, ginger & garlic</a>
+              <ul>
+                <li><a href="#">POPULAR SEARCHES</a></li>
+                <li><a href="#">Lemon</a></li>
+                <li><a href="#">Ginger</a></li>
+                <li><a href="#">garlic</a></li>
+                <li><a href="#">Coriander</a></li>
+                <li><a href="#">Green Chilli</a></li>
+                <li><a href="#">Chilli</a></li>
+              </ul>
+              </li>
+              <li><a href="#">Indian & Exotic Herbs</a></li>
+            </ul>
+            </li>
+            <li><a href="#">Fresh Fruits</a>
+            <ul>
+              <li><a href="#">Mangoes</a>
+              <ul>
+                <li><a href="#">POPULAR SEARCHES</a></li>
+                <li><a href="#">Fruits</a></li>
+                <li><a href="#">Mango</a></li>
+                <li><a href="#">Banana</a></li>
+                <li><a href="#">Apple</a></li>
+                <li><a href="#">Coconut</a></li>
+                <li><a href="#">watermelon</a></li>
+              </ul>
+              </li>
+              <li><a href="#">banana,Sapota & papaya</a></li>
+              <li><a href="#">Kiwi,Melon,Citrus Fruits</a></li>
+              <li><a href="#">apples & Pomogranate</a></li>
+              <li><a href="#">Seasonal Fruits</a></li>
+              <li><a href="#">Fruits Baskets</a></li>
+            </ul>
+            </li>
+            <li><a href="#">Cuts & Sprouts</a>
+            <ul>
+              <li><a href="#">Cut Fruit,Tendor Coconut</a>
+              <ul>
+                <li><a href="#">POPULAR SEARCHES</a></li>
+                <li><a href="#">Coconut</a></li>
+                <li><a href="#">Tender Coconut</a></li>
+                <li><a href="#">Garlic</a></li>
+                <li><a href="#">Sprouts</a></li>
+                <li><a href="#">Pomegranate</a></li>
+                <li><a href="#">Pumpkin</a></li>
+              </ul>
+              </li>
+              <li><a href="#">Cut & Peeled Veggies</a></li>
+              <li><a href="#">Fresh Salads&Sprouts</a></li>
+              <li><a href="#">Recipe Packs</a></li>
+            </ul>
+            </li>
+            <li><a href="#">Exotic Fruits & Veggies</a>
+            <ul>
+              <li><a href="#">Exotic Fruits</a>
+              <ul>
+                <li><a href="#">POPULAR SEARCHES</a></li>
+                <li><a href="#">Vegetables</a></li>
+                <li><a href="#">Grapes</a></li>
+                <li><a href="#">Mushroom</a></li>
+                <li><a href="#">Fruits</a></li>
+                <li><a href="#">Broccoli</a></li>
+                <li><a href="#">Cucumber</a></li>
+              </ul>
+              </li>
+              <li><a href="#">Exotic Vegetables</a></li>
+            </ul>
+            </li>
+            <li><a href="#">Organic Fruits & Vegetables</a>
+            <ul>
+              <li><a href="#">Organic Vegetables</a>
+              <ul>
+                <li><a href="#">POPULAR SEARCHES</a></li>
+                <li><a href="#">Vegetables</a></li>
+                <li><a href="#">Ginger</a></li>
+                <li><a href="#">Onion</a></li>
+                <li><a href="#">Organic Vegetables</a></li>
+                <li><a href="#">Green Chilli</a></li>
+                <li><a href="#">Tomato</a></li>
+              </ul>
+              </li>
+              <li><a href="#">Organic Fruits</a></li>
+            </ul>
+            </li>
+            <li><a href="#">Flower Bouquets, Bunches</a>
+            <ul>
+              <li><a href="#">Marigold</a>
+              <ul>
+                <li><a href="#">POPULAR SEARCHES</a></li>
+                <li><a href="#">Flowers</a></li>
+                <li><a href="#">Flower</a></li>
+                <li><a href="#">Banana Leaf</a></li>
+                <li><a href="#">Marigold</a></li>
+                <li><a href="#">Banana Leafs</a></li>
+                <li><a href="#">Fresho Flowers</a></li>
+              </ul>
+              </li>
+              <li><a href="#">Roses</a></li>
+              <li><a href="#">Other Flowers</a></li>
+            </ul>
+            </li>
+          </ul>
+          </li>
+          <li><a class = "nav-link" routerLink = "foodgrains">Foodgrains,Oil&Masala</a></li>
+          <li><a href="#">Bakery,Cakes &Dairy</a></li>
+          <li><a href="#">Beverages</a></li>
+          <li><a href="#">Snacks & Branded foods</a></li>
+          <li><a href="#">Beauty & Hygiene</a></li>
+          <li><a href="#">Cleaning & Household</a></li>
+          <li><a href="#">Kitchen,Garden &pets</a></li>
+          <li><a href="#">Eggs,Meat & Fish</a></li>
+          <li><a href="#">Gourmet & World Food</a></li>
+          <li><a href="#">Baby Care</a></li>
+          <li><a href="#">View All</a></li>
+        </ul>
+        </li>
+        <li><a href="offers">OFFERS</a></li>
+        <li><a href="#">BB EXPRESS</a></li>
+        <li><a href="#">BB SPECIALITY</a></li>
+        <li><a href="#">MORE STORES</a></li>
+        </ul>
+        Hi
+        {{user.c_email}}!!
+    </div>
+  </body>
+  
+</div>
+</div>
+</div>
